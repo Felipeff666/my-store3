@@ -1,10 +1,9 @@
 <div>
-  <h3>{{counter}}</h3>
-  <img width="200" [src]="img" alt="" *ngIf="img; else elseimg" (error)="imgError()" (load)="imgLoaded()" >
-  <!-- ngtemplate nos ayuda a mostrar un bloque en caso de else de *ngIf -->
+  <!--   <h3>{{counter}}</h3> -->
+  <img [src]="img" alt="" *ngIf="img; else elseimg" (error)="imgError()" (load)="imgLoaded()">
 
+  <!-- ngtemplate nos ayuda a mostrar un bloque en caso de else de *ngIf -->
   <ng-template #elseimg>
     <img width="200" [src]="imageDefault" alt="">
   </ng-template>
 </div>
-

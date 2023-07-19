@@ -58,10 +58,10 @@ export class ImgComponent implements OnInit, OnChanges {
     console.log('ngOnInit','imgValue=>', this.img);
 
 
-    this.counterFn = window.setInterval(()=>{
+/*     this.counterFn = window.setInterval(()=>{
       this.counter += 1;
       console.log('run counter')
-    },1000)
+    },1000) */
   }
 
   ngAfterViewInit(): void {
@@ -81,7 +81,7 @@ export class ImgComponent implements OnInit, OnChanges {
     //con vida ejecutandose, entonces para que esto no sea un problema, es que se aplica esta seccion o trigger de
     //ngOnDestroy evitandonos asi fugas en memoria de eventos o metodos que se quedan funcionando innecesariamnete
     console.log('OnDestroy');
-    window.clearInterval(this.counterFn);
+/*     window.clearInterval(this.counterFn); */
   }
 
   imgError(){

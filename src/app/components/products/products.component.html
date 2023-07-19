@@ -1,0 +1,14 @@
+<p> Cantidad de elementos en el carrito {{myShoppingcart.length}}</p>
+<p> El precio total es {{total | currency:'Bs.-'}}</p>
+<p>Today {{today | date:'short'}}</p>
+<p>Time ago.. {{date | timeAgo}}</p>
+<p>Other Date {{date | date:'yyyy-MM-dd'}}</p>
+<p>{{'hOlA uPercase PiPe' | uppercase}}</p>
+<p>{{'Hola reverse pipe' | reverse}}</p>
+<p>{{'Transformado las vocales de una palabra AEIOU A E I O U aeiou ' | vocalNumeric }}</p>
+
+<div class="products--grid">
+
+  <app-product *ngFor="let item of products" [product]="item" (addProduct)="onAddToShoppingCart($event)"></app-product>
+
+</div>
